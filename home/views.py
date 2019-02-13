@@ -18,3 +18,21 @@ def hello(request, name):
 def cube(request, number):
     num = number ** 3
     return render(request, 'cube.html', {'number': number, 'num': num})
+
+#get 형식으로 핑퐁
+def ping(request):
+    return render(request, 'ping.html')
+    
+def pong(request):
+    print(request.GET)
+    data = request.GET.get('data')
+    return render(request, 'pong.html', {'data': data})
+
+#post 형식으로 핑퐁
+def user_new(request):
+    return render(request, 'user_new.html')
+    
+def user_create(request):
+    nickname = request.POST.get('nickname')
+    pwd = request.POST.get('pwd')
+    return render(request, 'user_create.html', {'nickname': nickname, 'pwd': pwd})
