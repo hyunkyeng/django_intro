@@ -4,17 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dinner</title>
+    <title>Hello</title>
 </head>
 <body>
-    {% for menu in menus %}
-        <p>{{ menu }}</p>
-    {% endfor %}
-    <hr>
-    {% if pick == 'sushi' %}
-        <p>연어 초밥</p>
-    {% else %}
-        <p>{{ pick }}</p>
-    {% endif %}
+    <h1>{{ name }}, 안녕?</h1>
 </body>
 </html>

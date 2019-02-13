@@ -11,3 +11,10 @@ def dinner(request):
     pick = random.choice(menus)
     # return HttpResponse(menu) #서버에서 열리는 방법
     return render(request, 'dinner.html', {'menus': menus, 'pick': pick} ) #dinner.html 에서 열리는 방법 
+    
+def hello(request, name):
+    return render(request, 'hello.html', {'name': name})
+    
+def cube(request, number):
+    num = number ** 3
+    return render(request, 'cube.html', {'number': number, 'num': num})
