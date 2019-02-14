@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% block title %}Bye{% endblock %} 
+
+{% block body %}
+<form action="/utilities/ascii_make/">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">Text</label>
+            <input type="text" class="form-control" name="text">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputState">Font</label>
+            <select id="inputState" class="form-control" name="font">
+        {% for font in fonts%}
+            <option selected>{{ font }}</option>
+        {% endfor %}
+      </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign in</button>
+        
+</form>
+{% endblock %}

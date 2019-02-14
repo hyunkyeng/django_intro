@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Bye{% endblock %}
+
+{% block body %}
+    <h1>한국어 -> 영어</h1>
+    <form action="/utilities/translated/" method="POST">{% csrf_token %}
+
+        <input type="text" name="text"/>
+        <input type="submit" value="Submit"/>
+    </form>
+{% endblock %}

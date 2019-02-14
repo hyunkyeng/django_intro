@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Bye{% endblock %}
+
+{% block body %}
+    <h1>오늘은 {{ time }}</h1>
+    <h1>날씨 정보</h1>
+    <h3>날씨 : {{ weather }}</h3>
+    <H3>평균온도 : {{ temp }}</H3>
+    <h3>최고온도/최저온도 : {{ temp_min }}/{{ temp_max }}</h3>
+{% endblock %}
