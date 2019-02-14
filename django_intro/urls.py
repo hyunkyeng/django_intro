@@ -19,6 +19,7 @@ from django.urls import path, include
 
 
 urlpatterns = [
+    path('utilities/', include('utilities.urls')),
     path('home/', include('home.urls')),   #home으로 들어오면 home.urls를 호출한다. 
     path('admin/', admin.site.urls),
 ]
