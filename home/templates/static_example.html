@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% load static %}  <!-- load를 해줘야 static을 가져온다 -->
+
+{% block title %}STATIC{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+{% endblock %}
+
+{% block body %}
+    <img src="{% static '팬더.jpg' %}" alt="image"></img>
+{% endblock %}
